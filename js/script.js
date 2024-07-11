@@ -8,16 +8,34 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 */
 
-const percorso = prompt('Quanti Kilometri vuoi percorrere?', "40");
+const percorso = prompt('Quanti Kilometri vuoi percorrere?', "100");
 console.log('i kilometri che vuole percorrere il passegero sono' , percorso);
 
-const età = prompt('Quanti anni hai?' , "20") ;
+const età = prompt('Quanti anni hai?' , "17") ;
 console.log("Gli anni del passeggero sono" , età ) ;
 
 const prezzoBase =  0.21 ;
 console.log("Il prezzo minimo al km è" , prezzoBase ) ;
 
-const prezzoBiglietto = ( percorso * prezzoBase )
+const prezzoBiglietto = ( percorso * prezzoBase ) ;
 console.log("Il costo totale al km è" , prezzoBiglietto ) ;
+
+// const prezzoBigliettoSconto20 = (  prezzoBiglietto - ( prezzoBiglietto * 20 / 100 ) ) ;
+// console.log("Il costo totale al km è con lo sconto" , prezzoBigliettoSconto20 ) ;
+
+// const prezzoBigliettoSconto40 = (  prezzoBiglietto - ( prezzoBiglietto * 40 / 100 ) ) ;
+// console.log("Il costo totale al km è con lo sconto" , prezzoBigliettoSconto40 ) ;
+
+if ( età <= 17 ) {
+    const prezzoBigliettoSconto20 = (  prezzoBiglietto - ( prezzoBiglietto * 20 / 100 ) ) ;
+    console.log("Il costo totale al km è con lo sconto" , prezzoBigliettoSconto20 ) ;
+}
+
+if ( età >= 66 ) {
+    const prezzoBigliettoSconto40 = (  prezzoBiglietto - ( prezzoBiglietto * 40 / 100 ) ) ;
+    console.log("Il costo totale al km è con lo sconto" , prezzoBigliettoSconto40 ) ;
+}
+
+ 
 
 
